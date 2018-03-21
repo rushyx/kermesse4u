@@ -1,3 +1,5 @@
+My design based on the default multi language profile described below.
+
 MULTI-LANGUAGE DEFAULT PROFILE
 
 Please see this HTML document for an introduction to how this 
