@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>PhotoSwipe</title>
+	<meta name="author" content="Paul Rushmer" />
+	<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0;" name="viewport" />
+	<meta name="apple-mobile-web-app-capable" content="yes" />
+	<link href="styles.css" type="text/css" rel="stylesheet" />
+	
+	<link href="../photoswipe.css" type="text/css" rel="stylesheet" />
+	
+	<script type="text/javascript" src="../lib/klass.min.js"></script>
+	<script type="text/javascript" src="../code.photoswipe-3.0.5.min.js"></script>
+	
+	
+	<script type="text/javascript">
+
+		(function(window, PhotoSwipe){
+		
+			document.addEventListener('DOMContentLoaded', function(){
+			
+				var
+					options = {},
+					instance = PhotoSwipe.attach( window.document.querySelectorAll('#Gallery a'), options );
+			
+			}, false);
+			
+			
+		}(window, window.Code.PhotoSwipe));
+		
+	</script>
+	
+</head>
+<body>
+
+<div id="Header">
+	<a href= "../index.html"><img src= "images/kerm_logo.png"  alt= "Kermesse" /></a>
+</div>
+
+<div id="MainContent">
+
+	<div class="page-content">
+		<h1>PhotoSwipe Demo</h1>
+	</div>
+	
+	<ul id="Gallery" class="gallery">
+		<li><a href="images/full/allest.jpg"><img src="images/thumb/thumb_allest.jpg" alt="Image 001" /></a></li>
+		<li><a href="images/full/allest2.jpg"><img src="images/thumb/thumb_allest2.jpg" alt="Image 002" /></a></li>
+		<li><a href="images/full/allest5.jpg"><img src="images/thumb/thumb_allest5.jpg" alt="Image 004" /></a></li>
+		<li><a href="images/full/altare.jpg"><img src="images/thumb/thumb_altare.jpg" alt="Image 005" /></a></li>
+		<li><a href="images/full/banchetto.jpg"><img src="images/thumb/thumb_banchetto.jpg" alt="Image 006" /></a></li>
+		<li><a href="images/full/bianco.jpg"><img src="images/thumb/thumb_bianco.jpg" alt="Image 007" /></a></li>
+		<li><a href="images/full/bicchieri.jpg"><img src="images/thumb/thumb_bicchieri.jpg" alt="Image 008" /></a></li>
+		<li><a href="images/full/biglietti.jpg"><img src="images/thumb/thumb_biglietti.jpg" alt="Image 009" /></a></li>
+		<li><a href="images/full/biglietti2.jpg"><img src="images/thumb/thumb_biglietti2.jpg" alt="Image 010" /></a></li>		
+	</ul>
+	
+</div>	
+
+	
+<div id="Footer">
+	
+</div>
+
+</body>
+</html>
