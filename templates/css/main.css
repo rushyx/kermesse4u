@@ -207,6 +207,10 @@ margin-top: 40px;
 	#home #fbtext {
 		margin-top: 0;
 	}
+
+	#home figcaption {
+		font-size: 11px;
+	}
 }
 
 .fb-panel {
