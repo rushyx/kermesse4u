@@ -104,13 +104,6 @@ h5 {
 	margin-top: 10px;
 } 
 
-footer {
-	color: #383838 !important;
-	text-align: center;
-	padding: 25px 0;
-	border: 1px solid #ccc; 
-} 
-
 figure {
 	margin-bottom: 10px;
 }
@@ -368,12 +361,16 @@ ul#gallery .img-thumbnail:hover {
    border-radius: 0;
    border: 0;
  }
- 
+
  /* Add a gray background color and some padding to the footer */
  footer {
    background-color: #383838;
-   color: whitesmoke !important;
-   padding: 25px;
+   color: white;
+   padding: 25px 0;
+   border: 1px solid #ccc; 
 }
 
+footer img {
+	padding-top: 5px; 
+}
 
