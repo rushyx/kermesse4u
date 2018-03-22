@@ -28,6 +28,7 @@
 	<a href= "https://www.matrimonio.com/wedding-planner/kermesse--e14850" title= "Kermesse, vincitore Wedding Awards 2015 matrimonio.com"><img width= "70" height= "70" alt= "Kermesse, vincitore Wedding Awards 2015 matrimonio.com" src="https://cdn1.matrimonio.com/img/badges/2015/badge-weddingawards_it_IT.jpg"/></a>
 	<a href= "https://www.matrimonio.com/wedding-planner/kermesse--e14850" title= "Kermesse, vincitore Wedding Awards 2016 matrimonio.com"><img width= "70" height= "70" alt= "Kermesse, vincitore Wedding Awards 2016 matrimonio.com" src="https://cdn1.matrimonio.com/img/badges/2016/badge-weddingawards_it_IT.jpg"/></a>
 	<a href= "https://www.matrimonio.com/wedding-planner/kermesse--e14850" title= "Kermesse, vincitore Wedding Awards 2017 matrimonio.com"><img width= "70" height= "70" alt= "Kermesse, vincitore Wedding Awards 2017 matrimonio.com" src="https://cdn1.matrimonio.com/img/badges/2017/badge-weddingawards_it_IT.jpg"/></a>
+	<a href= "https://www.matrimonio.com/wedding-planner/kermesse--e14850" title= "Kermesse, vincitore Wedding Awards 2018 matrimonio.com"><img width= "70" height= "70" alt= "Kermesse, vincitore Wedding Awards 2018 matrimonio.com" src="https://cdn1.matrimonio.com/img/badges/2018/badge-weddingawards_it_IT.jpg"/></a>	
 	</p>
 
 	<?php 
