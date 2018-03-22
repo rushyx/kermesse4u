@@ -58,7 +58,7 @@ $tm *= 1000; // millisecs
   <div class="container-fluid">	
 	 <!-- Featured images section -->
 	  <div class="row text-center">
-		  <div class="col-lg-4">
+		  <div class="col-lg-4 col-md-4">
 		  		<?php
 			    $image = $page->images->first;		
 			    if (!$image) $image = $notfoundimg;			    	    			    
@@ -69,7 +69,7 @@ $tm *= 1000; // millisecs
 				 echo "</figure>";
 			    ?>
 		  </div>
-		  <div class="col-lg-4">
+		  <div class="col-lg-4 col-md-4">
 		  		<?php
 			    $image = $page->images->getNext($image);
 			    if (!$image) $image = $notfoundimg;			    
@@ -80,7 +80,7 @@ $tm *= 1000; // millisecs
 				 echo "</figure>";
 			    ?>
 		  </div>
-  		  <div class="col-lg-4">
+  		  <div class="col-lg-4 col-md-4">
 		  		<?php
 			    $image = $page->images->getNext($image);
 			    if (!$image) $image = $notfoundimg;
@@ -89,7 +89,6 @@ $tm *= 1000; // millisecs
 		  		 echo "<img src='$out_img->url' class='img-responsive' alt='$out_img->description' title='$out_img->description'>"; 
 				 echo "<figcaption class='figure-caption text-center'>{$out_img->description}</figcaption>";
 				 echo "</figure>";
-
 			    ?>
 		  </div>
 	  </div>
@@ -99,7 +98,7 @@ $tm *= 1000; // millisecs
 			<div class="jumbotron text-center">
 			    <?php echo "<h2>$newspg->title</h2>"; ?>   
 		   </div>
-			<div class="col-lg-4">
+			<div class="col-lg-4 col-md-4">
 			<?php
 				 $image = $page->newsevents->first;
 			    if (!$image) $image = $notfoundimg;			    	    			    
@@ -108,10 +107,9 @@ $tm *= 1000; // millisecs
 				 echo "<a href='$eventspg->url'><img class='img-responsive' src='{$out_img->url}' alt='{$out_img->description}' title='{$out_img->description}' ></a>";
 				 echo "<figcaption class='figure-caption text-center'>{$out_img->description}</figcaption>";
 				 echo "</figure>";
-				 //echo "<p><span class='glyphicon glyphicon-calendar'></span> 15/07/2017</p>";
 			 ?>
 			</div>
-			<div class="col-lg-4">
+			<div class="col-lg-4 col-md-4">
 			<?php
 				 $image = $page->newsevents->getNext($image);
 				 if (!$image) $image = $notfoundimg;			    	    			    
@@ -120,10 +118,9 @@ $tm *= 1000; // millisecs
 				 echo "<a href='$eventspg->url'><img class='img-responsive' src='{$out_img->url}' alt='{$out_img->description}' title='{$out_img->description}' ></a>";
 				 echo "<figcaption class='figure-caption text-center'>{$out_img->description}</figcaption>";
 				 echo "</figure>";
-				 //echo "<p><span class='glyphicon glyphicon-calendar'></span> 24/07/2016</p>";
 			 ?>
 			</div>
-			<div class="col-lg-4">
+			<div class="col-lg-4 col-md-4">
 			<?php
 				 $image = $page->newsevents->getNext($image);
 				 if (!$image) $image = $notfoundimg;			
@@ -132,7 +129,6 @@ $tm *= 1000; // millisecs
 				 echo "<a href='$newspg->url'><img class='img-responsive' src='{$out_img->url}' alt='{$out_img->description}' title='{$out_img->description}' ></a>";
 				 echo "<figcaption class='figure-caption text-center'>{$out_img->description}</figcaption>";
 				 echo "</figure>";
-				 //echo "<p><span class='glyphicon glyphicon-calendar'></span> 03/08/2017</p>";
 			 ?>
 			</div>
 		</div>
