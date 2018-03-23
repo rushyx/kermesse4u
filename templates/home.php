@@ -58,7 +58,7 @@ $tm *= 1000; // millisecs
   <div class="container-fluid">	
 	 <!-- Featured images section -->
 	  <div class="row text-center">
-		  <div class="col-lg-4 col-md-4">
+		  <div class="col-sm-4">
 		  		<?php
 			    $image = $page->images->first;		
 			    if (!$image) $image = $notfoundimg;			    	    			    
@@ -69,7 +69,7 @@ $tm *= 1000; // millisecs
 				 echo "</figure>";
 			    ?>
 		  </div>
-		  <div class="col-lg-4 col-md-4">
+		  <div class="col-sm-4">
 		  		<?php
 			    $image = $page->images->getNext($image);
 			    if (!$image) $image = $notfoundimg;			    
@@ -80,7 +80,7 @@ $tm *= 1000; // millisecs
 				 echo "</figure>";
 			    ?>
 		  </div>
-  		  <div class="col-lg-4 col-md-4">
+  		  <div class="col-sm-4">
 		  		<?php
 			    $image = $page->images->getNext($image);
 			    if (!$image) $image = $notfoundimg;
@@ -98,7 +98,7 @@ $tm *= 1000; // millisecs
 			<div class="jumbotron text-center">
 			    <?php echo "<h2>$newspg->title</h2>"; ?>   
 		   </div>
-			<div class="col-lg-4 col-md-4">
+			<div class="col-sm-4">
 			<?php
 				 $image = $page->newsevents->first;
 			    if (!$image) $image = $notfoundimg;			    	    			    
@@ -109,7 +109,7 @@ $tm *= 1000; // millisecs
 				 echo "</figure>";
 			 ?>
 			</div>
-			<div class="col-lg-4 col-md-4">
+			<div class="col-sm-4">
 			<?php
 				 $image = $page->newsevents->getNext($image);
 				 if (!$image) $image = $notfoundimg;			    	    			    
@@ -120,7 +120,7 @@ $tm *= 1000; // millisecs
 				 echo "</figure>";
 			 ?>
 			</div>
-			<div class="col-lg-4 col-md-4">
+			<div class="col-sm-4">
 			<?php
 				 $image = $page->newsevents->getNext($image);
 				 if (!$image) $image = $notfoundimg;			
