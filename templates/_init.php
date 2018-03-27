@@ -19,6 +19,7 @@ $homepage = $pages->get('/');
 // likewise the site settings page.  
 $ssetpage = $pages->get('/site-settings/');
 // The site wide not found image/strapline/version no.
+$noJSavail = $ssetpage->nonJSmsg;
 $notfoundimg = $ssetpage->image_missing; 
 $strapln = $ssetpage->strapline;
 $version = $ssetpage->version;

@@ -13,13 +13,23 @@ $fbpage = $pages->get("/feedback/");
 $newspg = $pages->get("/news/");
 $eventspg = $pages->get("/events/");
 
-// find the feedback records from couples template
-$feedback = $pages->find("template=couples,include=all");
+// find the feedback records - (they are children of the feedback page)
+$feedback = $fbpage->children();
 // if there is some feedback, grab one at random for display
 $fb1 = '<p>No feedback currently available</p>'; 
 if ($feedback) {
 	$fb1 = $feedback->getRandom();
+	// if there is an image of couple use it else use the stock img on fb page
+	if (count($fb1->images)) {
+   	$img = $fb1->images->first;
+   }
+   else {
+   	$img = $fbpage->couple_anon;
+   }
 }
+
+$img = $img->size(110,145);
+$nonJsimg = "<img class='fb-panel img-circle img-responsive' src='$img->url' alt='$img->description' title='$img->description'>";	   			 					   			 	
 
 // if there is a background image for feedback panel use it
 $fb_bg = '';
@@ -51,6 +61,7 @@ $tm *= 1000; // millisecs
 	    	echo "<h1>$title</h1>"; 
 	    	echo $content; 
 	    ?>   
+	    <noscript><?php echo "<div class='nojs'>$noJSavail</div>"; ?></noscript>
 	  </div>
 	</div>
 	
@@ -142,10 +153,12 @@ $tm *= 1000; // millisecs
 			<div class="row" style="min-height:200px; <?php echo $fb_bg; ?>"> 
 				<div class="col-lg-1 col-lg-offset-2 text-center" >
 	  		    	<div id="fb-img">
+	  		    	<noscript><?php echo $nonJsimg; ?></noscript>
 				   </div>
 				</div>
 			<div class="fb-panel col-lg-9">
 				<div id="fbtext" style="height:150px">
+				<noscript><?php echo $fb1->testimonial; ?></noscript>
 				</div>
 				<?php echo "<a href='$fbpage->url' class='btn btn-info' role='button'>$page->moreButtonText</a>"; ?>				
 			</div>

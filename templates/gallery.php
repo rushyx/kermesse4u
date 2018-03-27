@@ -19,6 +19,7 @@ $noAlbums = $page->numChildren;
    <div class="container">
 	  	<div class="row">
 	  		<?php echo $content; ?>
+	  		 <noscript><?php echo "<div class='nojs'>$noJSavail</div>"; ?></noscript>
 	  	</div> 	
 		  <div class="row"> 
 			  <div class="col-lg-12"> 
@@ -28,7 +29,11 @@ $noAlbums = $page->numChildren;
 						foreach($page->children() as $child) {
 							$cover = ($child->cover) ? $child->cover : $notfoundimg;
 							$cover = $cover->size(800,533);
-							echo "<div class='mySlides fader'>";
+							if ($i == 1) // set all but 1st cover hidden just in case JS disabled
+								echo "<div class='mySlides fader'>";
+							else
+								echo "<div class='mySlides fader' style='display:none'>";
+								
 							echo "<div class='numbertext'>$i / $noAlbums</div>";
 							echo "<figure class='figure'>";
 						   echo "<img src='{$cover->url}' style='width:100%'>";

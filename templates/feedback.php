@@ -32,7 +32,16 @@ $content = $page->body;
 $fbOnPg = $page->feedbacks_on_page;
 $feedback = '';
 
+// grab a few testimonials at random. Just so we have something to show for non JS users
+$testis = '';
+$i = ($fbOnPg < $nc) ? $fbOnPg : $nc; 
+for($x = 1; $x <= $i; ++$x) {
+	$testis .= "<li>{$children->eq($x-1)->testimonial}</li>";
+}
+	if ($testis) $testis = "<ul>$testis</ul>";
 ?>
+
+<style>#feedback button {display:none;}</style>
 
 <!-- main content -->
 <main>
@@ -46,6 +55,7 @@ $feedback = '';
 	  <div class="container">
 			<div class="row">
 				<div class="col-lg-12 text-center">
+				<noscript><?php echo "<div class='nojs'>$noJSavail</div>";?></noscript>
 				<?php echo $content; ?>
 				</div>
 			</div>		  
@@ -56,12 +66,13 @@ $feedback = '';
 			  		echo "<img class='img-rounded' src='$image->url' alt='$image->description' title='$image->description'>";
 			  		if ($image->description) echo "<p><span style='color:red' class='glyphicon glyphicon-heart'></span> $image->description</p>"; 
 	  				?>
-					<button id='more' onclick='pager()' class='btn btn-info'><?php echo $homepage->moreButtonText; ?></button>   									  	
+	  				<button id='more' onclick='pager()' class='btn btn-info'><?php echo $homepage->moreButtonText; ?></button>
 			  </div>
 
 				<div class="col-lg-8">
 					<p id="pgind"></p>
 					<div id="fb-text" style="min-height:500px">
+					<noscript><?php echo $testis; ?></noscript>	
 					</div>
 				</div>				 
 			</div>
@@ -73,6 +84,8 @@ $feedback = '';
 <script src="<?php echo $config->urls->templates?>js/k4u-feedback-min.js"></script>
 
 <script>
+$('button#more').css({'display':'inline-block'}); // fallback only reveal more button if JS active
+
 // webservice is the page being requested by ajax call 
 var webservice = <?php echo $lpath; ?>;
 var fbPerPg = <?php echo $fbOnPg; ?>;

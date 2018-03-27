@@ -193,7 +193,10 @@ figcaption {
 	padding: 10px 20px 20px 0;	
 }
 
-
+#home a img:hover {
+	background-color: #ffa8c5; 
+	border: 2px solid #ffa8c5; 
+}
 
 #home #fbtext {
 height: 110px;
@@ -203,6 +206,10 @@ margin-top: 40px;
 @media only screen and (max-width: 1024px) {
 	#home #fbtext {
 		margin-top: 0;
+	}
+
+	#home figcaption {
+		font-size: 11px;
 	}
 }
 
@@ -374,3 +381,7 @@ footer img {
 	padding-top: 5px; 
 }
 
+.nojs {
+	font-weight: bold;
+	color: red;
+}
